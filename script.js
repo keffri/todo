@@ -18,6 +18,11 @@ checkTasks = () => {
 };
 
 createTask = () => {
+  if (taskInput.value === "") {
+    alert("Please enter a task.");
+    return;
+  }
+
   let task = document.createElement("div");
   let taskText = document.querySelector(".task-input");
   task.innerHTML = taskText.value;
@@ -28,4 +33,8 @@ createTask = () => {
 };
 
 taskAdd.addEventListener("click", createTask);
+taskAdd.addEventListener("keydown", (e) => {
+  console.log(e.key);
+});
+
 taskAdd.addEventListener("click", checkTasks);
