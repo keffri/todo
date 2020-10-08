@@ -56,23 +56,33 @@ body {
   text-align: center;
 }
 
+.todo {
+}
+
+.completed {
+  transition: all 10s;
+}
+
 .todo-list {
   display: flex;
   justify-content: center;
 }
 
 .todo-tasks {
+  background-color: #fff;
 }
 
 .completed-tasks {
+  text-decoration: line-through;
+  background-color: #777;
 }
 
 .task {
-  background-color: #999999;
+  color: #000;
   width: 30rem;
   height: 2rem;
-  line-height: 1rem;
-  transition: background-color 0.25s;
+  line-height: 2rem;
+  transition: all 0.25s;
 }
 
 .task:hover {
