@@ -17,13 +17,24 @@ checkTasks = () => {
   });
 };
 
+checkCompleted = () => {
+  completedTasks = document.querySelectorAll(".completed-tasks");
+
+  completedTasks.forEach((completedTask) => {
+    completedTask.addEventListener("click", () => {
+      completedTask.classList.remove("completed-tasks");
+      todoTasks.appendChild(completedTask);
+    });
+  });
+};
+
 createTask = () => {
   if (taskInput.value === "") {
     alert("Please enter a task.");
     return;
   }
 
-  let task = document.createElement("div");
+  let task = document.createElement("li");
   let taskText = document.querySelector(".task-input");
   task.innerHTML = taskText.value;
   task.classList.add("task");
@@ -33,8 +44,13 @@ createTask = () => {
 };
 
 taskAdd.addEventListener("click", createTask);
-taskAdd.addEventListener("keydown", (e) => {
-  console.log(e.key);
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") {
+    return;
+  } else {
+    createTask();
+    checkTasks();
+  }
 });
 
 taskAdd.addEventListener("click", checkTasks);
