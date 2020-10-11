@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 10px;
+  background-color: #212121;
+  color: ;
+}
+
+.title-div {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+/**** Toggle Switch ****/
