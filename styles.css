@@ -16,6 +16,18 @@ hr {
   width: 100%;
 }
 
+/*** Variables ***/
+
+:root {
+  --primary-color: #212121;
+  --font-color: #fff;
+}
+
+[data-theme="light"] {
+  --primary-color: #fff;
+  --font-color: #212121;
+}
+
 /*** Title Section ***/
 
 .title-div {
