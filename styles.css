@@ -8,6 +8,7 @@ body {
   height: 100vh;
   font-size: 10px;
   background-color: #212121;
+  color: #fff;
 }
 
 .title-div {
@@ -21,13 +22,41 @@ body {
   font-size: 3rem;
 }
 
+.add-task-div {
+  width: 50rem;
+  height: 10rem;
+  margin: auto;
+}
+
+.add-task-title {
+  font-family: "Raleway", sans-serifs;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.add-task-div hr {
+  margin-bottom: 1.5rem;
+}
+
+.add-task {
+  width: 40rem;
+  padding: 0.5rem 0rem;
+  border: 0.1rem solid #999999;
+}
+
+.add-task::placeholder {
+  color: #000;
+  padding-left: 1rem;
+}
+
 /**** Toggle Switch ****/
 
 .switch {
   position: relative;
-  display: inline-block;
+  top: -2rem;
   width: 5rem;
   height: 1rem;
+  float: right;
 }
 
 .switch input {
