@@ -11,6 +11,13 @@ body {
   color: #fff;
 }
 
+hr {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/*** Title Section ***/
+
 .title-div {
   padding: 2rem;
   text-align: center;
@@ -22,9 +29,11 @@ body {
   font-size: 3rem;
 }
 
+/*** Add Task Section ***/
+
 .add-task-div {
   width: 50rem;
-  height: 10rem;
+  height: 12.5rem;
   margin: auto;
 }
 
@@ -34,19 +43,65 @@ body {
   padding-bottom: 1rem;
 }
 
-.add-task-div hr {
-  margin-bottom: 1.5rem;
-}
-
 .add-task {
   width: 40rem;
   padding: 0.5rem 0rem;
-  border: 0.1rem solid #999999;
+  border: 0.1rem solid #fff;
 }
 
 .add-task::placeholder {
   color: #000;
-  padding-left: 1rem;
+}
+
+/*** Add Todo Section ***/
+
+.add-todo {
+  color: #fff;
+  font-weight: 800;
+  margin: auto;
+  width: 9.8rem;
+  background-color: transparent;
+  border: 0.1rem solid #fff;
+  padding: 0.5rem;
+  transition: all 0.4s;
+}
+
+.add-todo:hover {
+  color: #212121;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+/*** Todo List Section ***/
+
+.todo-list-div {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height: 10rem;
+  margin: auto;
+}
+
+.todo-list-title {
+  font-family: "Raleway", sans-serifs;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+/*** Completed List Section ***/
+
+.completed-list-div {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height: 10rem;
+  margin: auto;
+}
+
+.completed-list-title {
+  font-family: "Raleway", sans-serifs;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
 /**** Toggle Switch ****/
