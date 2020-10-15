@@ -10,24 +10,26 @@
 </head>
 <div class="title-div">
 <h1 class="title">Todo List</h1>
-<label class="switch">
-  <input type="checkbox" checked>
+<!-- <label class="switch">
+  <input type="checkbox">
   <span class="slider round"></span>
-</label>
+</label> -->
 </div>
-<div class="add-task-div">
-  <h2 class="add-task-title">Add Todo</h2>
+<div class="add-todo-div">
+  <h2 class="add-todo-title">Add Todo</h2>
   <hr>
-  <input type="text" class="add-task" placeholder="Enter a todo..." required>
-  <button class="add-todo">Add</button>
+  <input id="todo-add" type="text" class="add-todo" placeholder="Enter a todo..." required>
+  <button class="add-todo-btn">Add</button>
 </div>
 <div class="todo-list-div">
   <h2 class="todo-list-title">Todo</h2>
   <hr>
+  <ul class="todo-list"></ul>
 </div>
 <div class="completed-list-div">
   <h2 class="completed-list-title">Completed</h2>
   <hr>
+  <ul class="completed-list"></ul>
 </div>
 <body>
   
