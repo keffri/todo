@@ -9,11 +9,42 @@ body {
   font-size: 10px;
   background-color: #212121;
   color: #fff;
+  font-family: "Raleway", sans-serif;
 }
 
 hr {
   margin-bottom: 1.5rem;
   width: 100%;
+}
+
+/*** Todo ***/
+
+ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  position: relative;
+  background-color: #fff;
+  color: #212121;
+  height: 2rem;
+  padding: 5px 10px 5px 40px;
+  margin-bottom: 2px;
+}
+
+.deleteButton {
+  border: 0.1rem solid #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.25rem 2.1rem;
+}
+
+.deleteButton:hover {
+  border: 0.1rem solid #fff;
+  background-color: #212121;
+  color: #fff;
 }
 
 /*** Variables ***/
@@ -41,33 +72,31 @@ hr {
   font-size: 3rem;
 }
 
-/*** Add Task Section ***/
+/*** Add Todo Section ***/
 
-.add-task-div {
+.add-todo-div {
   width: 50rem;
   height: 12.5rem;
   margin: auto;
 }
 
-.add-task-title {
+.add-todo-title {
   font-family: "Raleway", sans-serifs;
   font-size: 2rem;
   padding-bottom: 1rem;
 }
 
-.add-task {
+.add-todo {
   width: 40rem;
   padding: 0.5rem 0rem;
   border: 0.1rem solid #fff;
 }
 
-.add-task::placeholder {
+.add-todo::placeholder {
   color: #000;
 }
 
-/*** Add Todo Section ***/
-
-.add-todo {
+.add-todo-btn {
   color: #fff;
   font-weight: 800;
   margin: auto;
@@ -78,10 +107,9 @@ hr {
   transition: all 0.4s;
 }
 
-.add-todo:hover {
+.add-todo-btn:hover {
   color: #212121;
   background-color: #fff;
-  padding: 0.5rem;
 }
 
 /*** Todo List Section ***/
@@ -90,7 +118,7 @@ hr {
   display: flex;
   flex-direction: column;
   width: 50rem;
-  height: 10rem;
+
   margin: auto;
 }
 
@@ -100,11 +128,34 @@ hr {
   padding-bottom: 1rem;
 }
 
+.todo-list {
+  width: 50rem;
+}
+
+/*** Completed/Checked ***/
+
+/* ul li.checked {
+  background-color: #fff;
+  color: #212121;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #212121;
+  border-style: solid;
+  border-width: 0 0.2rem 0.2rem 0;
+  top: 1rem;
+  left: 1.6rem;
+  transform: rotate(45deg);
+  height: 1.5rem;
+  width: 0.7rem;
+} */
+
 /*** Completed List Section ***/
 
 .completed-list-div {
-  display: flex;
-  flex-direction: column;
   width: 50rem;
   height: 10rem;
   margin: auto;
@@ -113,7 +164,13 @@ hr {
 .completed-list-title {
   font-family: "Raleway", sans-serifs;
   font-size: 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
 }
 
 /**** Toggle Switch ****/
