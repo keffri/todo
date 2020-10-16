@@ -28,7 +28,7 @@ createTodo = () => {
     todos[i].addEventListener(
       "click",
       (add = () => {
-        todos[i].removeEventListener("click", add);
+        todos[i].removeEventListener("click", add, false);
         todos[i].className = "checked";
         completedList.appendChild(todos[i]);
       })
