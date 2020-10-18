@@ -28,9 +28,11 @@ createTodo = () => {
     todos[i].addEventListener(
       "click",
       (add = () => {
-        todos[i].removeEventListener("click", add, false);
         todos[i].className = "checked";
         completedList.appendChild(todos[i]);
+        if (todos[i].className === "checked") {
+          todos[i].removeEventListener("click", add);
+        }
       })
     );
   }
@@ -44,10 +46,23 @@ createTodo = () => {
   }
 };
 
+/*** Create Todo on Enter ***/
+
+todoAddButton.addEventListener("click", createTodo);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    createTodo();
+  }
+});
+
 /*** Dark Mode ***/
 
 let darkModeSwitch = document.querySelector("input[type=checkbox]");
 
-/*** Event Listeners ***/
-
-todoAddButton.addEventListener("click", createTodo);
+darkModeSwitch.addEventListener("click", () => {
+  if (darkModeSwitch.checked) {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+});
